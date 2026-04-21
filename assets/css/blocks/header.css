@@ -1,8 +1,11 @@
+.header {
+	border-bottom: 1px solid rgba(90, 115, 160, 0.1);
+}
+
 .header__wrapper {
 	padding: 15px 0 13px;
 	display: flex;
 	align-items: center;
-	border-bottom: 1px solid rgba(90, 115, 160, 0.1);
 }
 
 .header__nav {
