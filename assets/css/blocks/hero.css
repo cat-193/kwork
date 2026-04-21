@@ -1,0 +1,153 @@
+.hero {}
+
+
+.hero__wrapper {
+	padding-top: 35px;
+}
+
+.hero__content {
+	max-width: 640px;
+	margin: 0 auto;
+	margin-bottom: 31px;
+}
+
+.hero__title {
+	font-weight: 600;
+	font-size: 50px;
+	text-align: center;
+	text-wrap: balance;
+	color: #282828;
+	margin-bottom: 39px;
+}
+
+.hero__title--blue {
+	color: #5a73a0;
+}
+
+.hero__box {
+	margin-bottom: 30px;
+	display: flex;
+	gap: 32px;
+}
+
+.hero__text {
+	font-weight: 400;
+	font-size: 14px;
+	color: #282828;
+	position: relative;
+	padding-left: 27px;
+}
+
+.hero__text::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url('../../images/hero/check-icon.svg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+
+	width: 18px;
+	height: 18px;
+}
+
+.hero__text--bold {
+	font-weight: 600;
+	color: #565867;
+}
+
+.hero__button {
+	display: flex;
+	justify-content: center;
+	gap: 2px;
+	margin: 0 auto;
+}
+
+.hero__button-text {
+	border-radius: 12px 0 0 12px;
+	background: #282828;
+	padding: 19px 39.5px 18px 41.5px;
+	font-weight: 500;
+	font-size: 15px;
+	color: #fff;
+	transition: var(--transition);
+}
+
+.hero__button-icon {
+	border-radius: 0 12px 12px 0;
+	background: #282828;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px 20px 22px 22px;
+	transition: var(--transition);
+}
+
+.hero__button:focus-visible {
+	outline: none;
+}
+
+.hero__button:focus-visible .hero__button-text,
+.hero__button:focus-visible .hero__button-icon {
+	outline: none;
+	background: #5a73a0;
+}
+
+@media (hover:hover) {
+
+	.hero__button:hover .hero__button-text,
+	.hero__button:hover .hero__button-icon {
+		background: #5a73a0;
+	}
+}
+
+
+.hero__button:active .hero__button-text,
+.hero__button:active .hero__button-icon {
+	background: #6f8fc8;
+}
+
+
+.hero__images {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	max-width: 1008px;
+	margin: 0 auto;
+}
+
+.hero__image {
+	display: block;
+}
+
+.hero__image-wrapper {
+	position: relative;
+	z-index: 2;
+}
+
+.hero__image-wrapper::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 156px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+	pointer-events: none;
+}
+
+.hero__image--right {
+	position: absolute;
+	right: 0;
+	top: 13px;
+	z-index: 3;
+
+}
+
+.hero__image--left {
+	position: absolute;
+	left: 38px;
+	bottom: 20px;
+	z-index: 3;
+}
