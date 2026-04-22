@@ -32,6 +32,11 @@
 						<img src="./assets/images/logo.svg" alt="Sertexity logo">
 					</a>
 					<button class="header__button site-button">Sign Up</button>
+					<button class="burger-menu">
+						<span class="burger-line"></span>
+						<span class="burger-line"></span>
+						<span class="burger-line"></span>
+					</button>
 				</div>
 			</div>
 		</header>
@@ -64,16 +69,28 @@
 					</div>
 					<div class="hero__images">
 						<div class="hero__image-wrapper">
-							<img src="./assets/images/hero/hero-image.webp"
-								srcset="./assets/images/hero/hero-image.webp 1x, ./assets/images/hero/hero-image@2x.webp 2x"
-								alt="board BTC/USDT" class="hero__image hero__image--main">
+							<picture>
+								<source media="(max-width: 440px)"
+									srcset="./assets/images/hero/mobile/hero-image.webp 1x, ./assets/images/hero/mobile/hero-image@2x.webp 2x">
+								<img src="./assets/images/hero/hero-image.webp"
+									srcset="./assets/images/hero/hero-image.webp 1x, ./assets/images/hero/hero-image@2x.webp 2x"
+									alt="board BTC/USDT" class="hero__image hero__image--main">
+							</picture>
 						</div>
-						<img src="./assets/images/hero/hero-right-image.webp"
-							srcset="./assets/images/hero/hero-right-image.webp 1x, ./assets/images/hero/hero-right-image@2x.webp 2x"
-							alt="graph coins" class="hero__image hero__image--right">
-						<img src="./assets/images/hero/hero-left-image.webp"
-							srcset="./assets/images/hero/hero-left-image.webp 1x, ./assets/images/hero/hero-left-image@2x.webp 2x"
-							alt="table graph" class="hero__image hero__image--left">
+						<picture>
+							<source media="(max-width: 576px)"
+								srcset="./assets/images/hero/mobile/hero-right-image.webp 1x, ./assets/images/hero/mobile/hero-right-image@2x.webp 2x">
+							<img src="./assets/images/hero/hero-right-image.webp"
+								srcset="./assets/images/hero/hero-right-image.webp 1x, ./assets/images/hero/hero-right-image@2x.webp 2x"
+								alt="graph coins" class="hero__image hero__image--right">
+						</picture>
+						<picture>
+							<source media="(max-width: 576px)"
+								srcset="./assets/images/hero/mobile/hero-left-image.webp 1x, ./assets/images/hero/mobile/hero-left-image@2x.webp 2x">
+							<img src="./assets/images/hero/hero-left-image.webp"
+								srcset="./assets/images/hero/hero-left-image.webp 1x, ./assets/images/hero/hero-left-image@2x.webp 2x"
+								alt="table graph" class="hero__image hero__image--left">
+						</picture>
 					</div>
 				</div>
 			</div>
@@ -81,7 +98,7 @@
 	</div>
 
 	<main class="main">
-		<section class="how-it-works" id="how-it-works">
+		<!-- <section class="how-it-works" id="how-it-works">
 			<div class="container">
 				<div class="how-it-works__wrapper">
 					<h2 class="how-it-works__title section-title">How it works</h2>
@@ -143,9 +160,9 @@
 					</ul>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
-		<section class="advantages" id="advantages">
+		<!-- <section class="advantages" id="advantages">
 			<div class="container">
 				<div class="advantages__wrapper">
 					<h2 class="advantages__title section-title">Platform advantages</h2>
@@ -247,8 +264,8 @@
 					</ul>
 				</div>
 			</div>
-		</section>
-
+		</section> -->
+		<!-- 
 		<section class="start">
 			<div class="container">
 				<div class="start__wrapper">
@@ -322,9 +339,9 @@
 					</ul>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
-		<section class="arbitrage">
+		<!-- <section class="arbitrage">
 			<div class="container">
 				<div class="arbitrage__wrapper">
 					<ul class="arbitrage__list">
@@ -352,9 +369,9 @@
 					</ul>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
-		<section class="ready" id="platform">
+		<!-- <section class="ready" id="platform">
 			<div class="container">
 				<div class="ready__wrapper">
 					<h2 class="ready__title section-title">
@@ -373,9 +390,9 @@
 					</button>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
-		<section class="why">
+		<!-- <section class="why">
 			<div class="container">
 				<div class="why__wrapper">
 					<h2 class="why__title section-title">Why Sertexity?</h2>
@@ -429,10 +446,10 @@
 					</ul>
 				</div>
 			</div>
-		</section>
+		</section> -->
 	</main>
 
-	<footer class="footer">
+	<!-- <footer class="footer">
 		<div class="container">
 			<div class="footer__wrapper">
 				<a class="footer__logo" href="#">
@@ -491,7 +508,7 @@
 				</div>
 			</div>
 		</div>
-	</footer>
+	</footer> -->
 </body>
 
 </html>

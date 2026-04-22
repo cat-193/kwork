@@ -64,7 +64,7 @@ button {
 
 .container {
 	max-width: 1440px;
-	padding: 0 75px;
+	padding: 0 clamp(0.938rem, -0.455rem + 5.714vi, 4.688rem);
 	margin: 0 auto;
 }
 
@@ -99,6 +99,15 @@ button {
 	background-position: left top, right top;
 }
 
+@media (max-width: 768px) {
+	.page-wrapper {
+		background-image: url('../images/hero/mobile/hero-bg.webp');
+		background-repeat: no-repeat;
+		background-position: top center;
+		background-size: cover;
+	}
+}
+
 .section-title {
 	display: flex;
 	gap: 48px;
@@ -121,11 +130,13 @@ button {
 }
 
 .earn-button__text {
+	display: flex;
+	align-items: center;
 	border-radius: 12px 0 0 12px;
 	background: #282828;
-	padding: 19px 42.5px 18px 41.5px;
+	padding: clamp(0.938rem, 0.845rem + 0.381vi, 1.188rem) clamp(1.969rem, 1.713rem + 1.048vi, 2.656rem) clamp(0.938rem, 0.868rem + 0.286vi, 1.125rem) clamp(1.969rem, 1.737rem + 0.952vi, 2.594rem);
 	font-weight: 500;
-	font-size: 15px;
+	font-size: clamp(0.875rem, 0.852rem + 0.095vi, 0.938rem);
 	color: #fff;
 	transition: var(--transition);
 }
@@ -136,7 +147,7 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	padding: 24px 20px 22px 22px;
+	padding: clamp(1.188rem, 1.071rem + 0.476vi, 1.5rem) clamp(0.813rem, 0.65rem + 0.667vi, 1.25rem) clamp(1.188rem, 1.118rem + 0.286vi, 1.375rem) 22px;
 	transition: var(--transition);
 }
 
