@@ -96,3 +96,18 @@ button {
 	background-repeat: no-repeat, no-repeat;
 	background-position: left top, right top;
 }
+
+.section-title {
+	display: flex;
+	gap: 48px;
+	margin-bottom: 40px;
+	font-weight: 500;
+	font-size: 32px;
+	color: #282828;
+}
+
+.section-title::before {
+	font-weight: 300;
+	font-size: 20px;
+	color: rgba(90, 115, 160, 0.35);
+}

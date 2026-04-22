@@ -4,19 +4,11 @@
 }
 
 .how-it-works__title {
-	display: flex;
-	gap: 48px;
 	margin-bottom: 29px;
-	font-weight: 500;
-	font-size: 32px;
-	color: #282828;
 }
 
 .how-it-works__title::before {
 	content: '01/';
-	font-weight: 300;
-	font-size: 20px;
-	color: rgba(90, 115, 160, 0.35);
 }
 
 .how-it-works__list {
