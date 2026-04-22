@@ -1,0 +1,127 @@
+.start {
+	background: #e9eef5;
+}
+
+
+.start__wrapper {
+	padding: 82.5px 0;
+}
+
+.start__title::before {
+	content: '03/';
+}
+
+.start__list {
+	display: flex;
+	gap: 30px;
+	counter-reset: start-counter;
+}
+
+.start__item {
+	min-height: 390px;
+	flex: 1;
+	min-width: 0;
+	border-radius: 20px;
+	background: #fff;
+	counter-increment: start-counter;
+	padding: 27px 22px 26px 24px;
+	display: flex;
+	flex-direction: column;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.start__item-box {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	margin-bottom: auto;
+}
+
+.start__item-title {
+	font-weight: 600;
+	font-size: 18px;
+	color: #282828;
+	display: flex;
+	gap: 6px;
+}
+
+.start__item-title::before {
+	content: counter(start-counter) '.';
+	font-weight: 600;
+	font-size: 18px;
+	color: #282828;
+	margin-left: 5px;
+}
+
+.start__item-text {
+	font-weight: 400;
+	font-size: 14px;
+	color: #8e8e8e;
+}
+
+.start__item-form {
+	border-radius: 11px;
+	background: #f4f5fb;
+	padding: 11px 16px 15px;
+}
+
+
+.start__item:nth-child(1) {
+	background-image: url('../../images/start/step-1.svg');
+}
+
+.start__item:nth-child(2) {
+	background-image: url('../../images/start/step-2.svg');
+	background-position: center 118px;
+}
+
+.start__item:nth-child(3) {
+	background-position: center 125px;
+	background-image: url('../../images/start/step-3.svg');
+}
+
+.start__item:nth-child(4) {
+	background-image: url('../../images/start/step-4.svg');
+}
+
+.start__item-caption {
+	font-weight: 400;
+	font-size: 12px;
+	color: #a8b8cd;
+	margin-bottom: 11px;
+	margin-left: 8px;
+}
+
+.start__item-wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+}
+
+.start__item-input {
+	background: #fff;
+	border-radius: 6px;
+	border: none;
+	padding: 8px 17px;
+}
+
+.start__item-input::placeholder {
+	font-weight: 400;
+	font-size: 10px;
+	color: rgba(168, 184, 205, 0.46);
+}
+
+.start__item-input--text-center::placeholder {
+	text-align: center;
+}
+
+.start__item-button {
+	padding: 11px;
+	font-size: 10px;
+	color: #fff;
+}
+
+.start__item-button--black {
+	background: #565867;
+}
