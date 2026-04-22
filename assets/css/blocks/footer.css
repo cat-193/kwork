@@ -18,10 +18,11 @@
 	padding-top: 19px;
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 }
 
 .footer__nav {
-	margin-right: 369px;
+	margin-right: clamp(0rem, -26.357rem + 54.911vi, 23.063rem);
 }
 
 .footer__list {
@@ -45,7 +46,7 @@
 .footer__social {
 	display: flex;
 	gap: 21px;
-	margin-right: 550px;
+	margin-right: clamp(0rem, -39.286rem + 81.845vi, 34.375rem);
 }
 
 .footer__copyright {
