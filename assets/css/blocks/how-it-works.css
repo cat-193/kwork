@@ -1,6 +1,6 @@
 .how-it-works__wrapper {
 	padding-top: clamp(3.938rem, 3.496rem + 1.81vi, 5.125rem);
-	padding-bottom: 50px;
+	padding-bottom: clamp(2.188rem, 1.839rem + 1.429vi, 3.125rem);
 }
 
 .how-it-works__title {
@@ -62,5 +62,9 @@
 	.how-it-works__item {
 		min-height: 145px;
 		padding: 12px 21px 12px 13px;
+	}
+
+	.how-it-works__item-icon img {
+		width: 23px;
 	}
 }
