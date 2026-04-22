@@ -1,5 +1,5 @@
 .arbitrage__wrapper {
-	padding-top: 103px;
+	padding-top: clamp(4.563rem, 3.866rem + 2.857vi, 6.438rem);
 	padding-bottom: 100px;
 }
 
@@ -16,14 +16,14 @@
 
 .arbitrage__list {
 	display: grid;
-	grid-template-columns: 740px 520px;
+	grid-template-columns: minmax(400px, 740px) minmax(300px, 520px);
 	grid-template-rows: repeat(2, 240px);
 	gap: 30px;
 }
 
 .arbitrage__item {
-	border-radius: 20px;
-	padding: 29px 26px 34px 34px;
+	border-radius: clamp(0.625rem, 0.393rem + 0.952vi, 1.25rem);
+	padding: clamp(0.875rem, 0.527rem + 1.429vi, 1.813rem) 26px clamp(1.188rem, 0.839rem + 1.429vi, 2.125rem) clamp(1rem, 0.582rem + 1.714vi, 2.125rem);
 	background-color: #f4f5fb;
 	display: flex;
 	flex-direction: column;
@@ -52,6 +52,7 @@
 .arbitrage__item--black .arbitrage__text {
 	color: #fafbff;
 }
+
 .arbitrage__item--black .arbitrage__box {
 	background: #474848;
 }
@@ -61,14 +62,55 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 10px;
-	width: 49px;
-	height: 49px;
+	width: clamp(2.5rem, 2.268rem + 0.952vi, 3.125rem);
+	height: clamp(2.5rem, 2.268rem + 0.952vi, 3.125rem);
 	margin-bottom: auto;
 	background-color: rgba(90, 115, 160, 0.15);
 }
 
 .arbitrage__text {
 	font-weight: 600;
-	font-size: 18px;
+	font-size: clamp(0.875rem, 0.782rem + 0.381vi, 1.125rem);
 	color: #282828;
+}
+
+@media (max-width: 1024px) {
+	.arbitrage__title {
+		max-width: 237px;
+		text-wrap: balance;
+	}
+
+	.arbitrage__list {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		gap: 9px;
+	}
+
+	.arbitrage__item {
+		min-height: 145px;
+		background-image: url('../../images/arbitrage/mobile/graph-money.svg');
+		background-repeat: no-repeat;
+		background-position: top 8px right 13px;
+	}
+
+	.arbitrage__item--black {
+		background-image: url('../../images/arbitrage/mobile/hours24.svg');
+	}
+
+	.arbitrage__item--blue {
+		grid-column: 1 / 2;
+		grid-row: auto;
+		min-height: 315px;
+		padding: 20px 21px;
+
+		background-color: #5a73a0;
+		background-image: url('../../images/arbitrage/mobile/arbitrage-bg-1.webp'), url('../../images/arbitrage/mobile/arbitrage-bg-3.webp'), url('../../images/arbitrage/mobile/arbitrage-bg-2.webp');
+		background-position:center 0, bottom right, bottom right;
+		background-blend-mode: multiply, normal, normal;
+	}
+
+	.arbitrage__box {
+		margin-bottom: 22px;
+	}
+
 }
