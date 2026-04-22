@@ -14,4 +14,22 @@ document.addEventListener('DOMContentLoaded', function () {
 			navElement.classList.remove('open');
 		});
 	});
+
+	const animateElements = document.querySelectorAll('.animate-on-scroll, .animate-fade, .animate-slide-left, .animate-slide-right, .animate-scale');
+
+	const observer = new IntersectionObserver((entries) => {
+		entries.forEach((entry) => {
+			if (entry.isIntersecting) {
+				entry.target.classList.add('animated');
+				observer.unobserve(entry.target);
+			}
+		});
+	}, {
+		threshold: 0.01,
+		rootMargin: '0px'
+	});
+
+	animateElements.forEach(element => {
+		observer.observe(element);
+	});
 });
