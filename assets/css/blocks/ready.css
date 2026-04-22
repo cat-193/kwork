@@ -21,7 +21,7 @@
 
 
 .ready__wrapper {
-	padding-top: 89px;
+	padding-top: clamp(2.188rem, 0.934rem + 5.143vi, 5.563rem);
 	padding-bottom: 116px;
 	max-width: 531px;
 	position: relative;
@@ -29,25 +29,50 @@
 }
 
 .ready__title {
-	margin-bottom: 30px;
+	margin-bottom: clamp(1rem, 0.675rem + 1.333vi, 1.875rem);
 }
 
 .ready__title::before {
 	content: "05/";
 }
 
-
 .ready__text {
 	font-weight: 400;
-	font-size: 18px;
+	font-size: clamp(0.875rem, 0.782rem + 0.381vi, 1.125rem);
 	color: #282828;
-	margin-bottom: 43px;
+	margin-bottom: clamp(2.125rem, 1.916rem + 0.857vi, 2.688rem);
 }
 
-.ready__button {}
+@media (max-width: 1320px) {
+	.ready__wrapper {
+		padding-bottom: 255px;
+	}
+}
 
-.earn-button {}
+@media (max-width: 1024px) {
+	.ready {
+		background-image: url('../../images/ready/mobile/ready-phone.webp'),
+			url('../../images/ready/ready-blur.webp');
+		background-size: auto, cover;
+		background-position: center bottom,
+			center bottom;
+	}
 
-.earn-button__text {}
+	.ready::after {
+		display: none;
+	}
 
-.earn-button__icon {}
+	.ready__wrapper {
+		padding-bottom: 255px;
+	}
+}
+
+@media (max-width: 440px) {
+	.ready {
+		background-image: url('../../images/ready/mobile/ready-phone.webp'),
+			url('../../images/ready/mobile/ready-blur.webp');
+		background-size: auto, cover;
+		background-position: center bottom,
+			center;
+	}
+}
