@@ -1,6 +1,6 @@
 .why__wrapper {
-	padding-top: 100px;
-	padding-bottom: 100px;
+	padding-top: clamp(4.375rem, 3.679rem + 2.857vi, 6.25rem);
+	padding-bottom: clamp(4.375rem, 3.679rem + 2.857vi, 6.25rem);
 }
 
 .why__title::before {
@@ -12,7 +12,6 @@
 	grid-template-columns: repeat(3, 1fr);
 	gap: 30px;
 	grid-template-rows: repeat(2, 239px);
-
 }
 
 .why__item {
@@ -32,8 +31,8 @@
 .why__item-box {
 	background: rgba(90, 115, 160, 0.15);
 	border-radius: 10px;
-	width: 49px;
-	height: 49px;
+	width: clamp(2.5rem, 2.291rem + 0.857vi, 3.063rem);
+	height: clamp(2.5rem, 2.291rem + 0.857vi, 3.063rem);
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -41,7 +40,7 @@
 
 .why__text {
 	font-weight: 600;
-	font-size: 18px;
+	font-size: clamp(1rem, 0.954rem + 0.19vi, 1.125rem);
 	color: #282828;
 }
 
@@ -51,24 +50,74 @@
 	grid-column: 2 / 3;
 	grid-row: 1 / 3;
 	background-color: #5a73a0;
-	background-image: -webkit-image-set(
-			url('../../images/why/bg.webp') 1x,
-			url('../../images/why/bg@2x.webp') 2x
-		);
-	background-image: image-set(
-			url('../../images/why/bg.webp') 1x type('image/webp'),
-			url('../../images/why/bg@2x.webp') 2x type('image/webp')
-		);
+	background-image: -webkit-image-set(url('../../images/why/bg.webp') 1x,
+			url('../../images/why/bg@2x.webp') 2x);
+	background-image: image-set(url('../../images/why/bg.webp') 1x type('image/webp'),
+			url('../../images/why/bg@2x.webp') 2x type('image/webp'));
 	background-repeat: no-repeat;
 	background-position: bottom;
 }
 
 .why__item--big .why__item-box {
 	background: #d0d8e8;
-	margin-bottom: 28px;
+	margin-bottom: clamp(1.438rem, 1.321rem + 0.476vi, 1.75rem);
 }
 
 .why__item--big .why__text {
 	color: #fafbff;
 	font-size: 17px;
+}
+
+@media (max-width: 768px) {
+	.why__list {
+		grid-template-columns: 1fr;
+		gap: 30px;
+		grid-template-rows: auto;
+		gap: 9px;
+	}
+
+	.why__item {
+		min-height: 145px;
+	}
+
+	.why__item--big {
+		grid-column: 1 / 2;
+		grid-row: auto;
+		min-height: 328px;
+
+		background-image: -webkit-image-set(url('../../images/why/mobile/bg.webp') 1x,
+				url('../../images/why/mobile/bg@2x.webp') 2x);
+		background-image: image-set(url('../../images/why/mobile/bg.webp') 1x type('image/webp'),
+				url('../../images/why/mobile/bg@2x.webp') 2x type('image/webp'));
+		background-size: cover;
+	}
+
+	.why__item--big .why__text {
+		max-width: 240px;
+		font-size: 16px;
+	}
+
+	.why__item-box img {
+		width: 26px;
+	}
+
+	.why__item:nth-child(1) {
+		order: 1;
+	}
+
+	.why__item:nth-child(2) {
+		order: 4;
+	}
+
+	.why__item:nth-child(3) {
+		order: 3;
+	}
+
+	.why__item:nth-child(4) {
+		order: 2;
+	}
+
+	.why__item:nth-child(5) {
+		order: 5;
+	}
 }
