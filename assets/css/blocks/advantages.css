@@ -1,6 +1,6 @@
 .advantages__wrapper {
 	padding-top: clamp(2.188rem, 1.839rem + 1.429vi, 3.125rem);
-	padding-bottom: 100px;
+	padding-bottom: clamp(4.438rem, 3.764rem + 2.762vi, 6.25rem);
 }
 
 

@@ -4,7 +4,7 @@
 
 
 .start__wrapper {
-	padding: 82.5px 0;
+	padding: clamp(3.125rem, 2.371rem + 3.095vi, 5.156rem) 0;
 }
 
 .start__title::before {
@@ -18,13 +18,13 @@
 }
 
 .start__item {
-	min-height: 390px;
+	min-height: clamp(21.625rem, 20.604rem + 4.19vi, 24.375rem);
 	flex: 1;
 	min-width: 0;
 	border-radius: 20px;
 	background: #fff;
 	counter-increment: start-counter;
-	padding: 27px 22px 26px 24px;
+	padding: 27px clamp(0.938rem, 0.775rem + 0.667vi, 1.375rem) clamp(1.25rem, 1.111rem + 0.571vi, 1.625rem) 24px;
 	display: flex;
 	flex-direction: column;
 	background-repeat: no-repeat;
@@ -40,7 +40,7 @@
 
 .start__item-title {
 	font-weight: 600;
-	font-size: 18px;
+	font-size: clamp(1rem, 0.954rem + 0.19vi, 1.125rem);
 	color: #282828;
 	display: flex;
 	gap: 6px;
@@ -124,4 +124,47 @@
 
 .start__item-button--black {
 	background: #565867;
+}
+
+@media (max-width: 1024px) {
+	.start__list {
+		flex-direction: column;
+		gap: 9px;
+	}
+
+	.start__item-box {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.start__item-text {
+		max-width: 169px;
+		text-wrap: balance;
+	}
+
+	.start__item-input {
+		line-height: 120%;
+	}
+
+	.start__item-form {
+		margin-left: 34px;
+		margin-right: 40px;
+	}
+
+	.start__item:nth-child(1) {
+		background-position: center clamp(5.688rem, 5.084rem + 2.476vi, 7.313rem);
+	}
+
+	.start__item:nth-child(2) {
+		background-position: center 76px;
+	}
+
+	.start__item:nth-child(3) {
+		background-position: center clamp(4.75rem, 4.193rem + 2.286vi, 6.25rem);
+	}
+
+	.start__item:nth-child(4) {
+		background-image: url('../../images/start/step-4.svg');
+		background-position: center clamp(4.813rem, 4.279rem + 2.19vi, 6.25rem);
+	}
 }
