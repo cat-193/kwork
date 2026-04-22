@@ -1,0 +1,74 @@
+.arbitrage__wrapper {
+	padding-top: 103px;
+	padding-bottom: 50px;
+}
+
+.arbitrage__title {
+	color: #fafbff;
+	margin-bottom: 0;
+	max-width: 515px;
+}
+
+.arbitrage__title::before {
+	content: '04/';
+	color: rgba(255, 255, 255, 0.35);
+}
+
+.arbitrage__list {
+	display: grid;
+	grid-template-columns: 740px 520px;
+	grid-template-rows: repeat(2, 240px);
+	gap: 30px;
+}
+
+.arbitrage__item {
+	border-radius: 20px;
+	padding: 29px 26px 34px 34px;
+	background-color: #f4f5fb;
+	display: flex;
+	flex-direction: column;
+	background-image: url('../../images/arbitrage/graph-money.svg');
+	background-repeat: no-repeat;
+	background-position: top 14px right 26px;
+}
+
+.arbitrage__item--blue {
+	grid-column: 1 / 2;
+	grid-row: 1 / 3;
+	padding: 42px 43px;
+	background-color: #5a73a0;
+	background-image: url('../../images/arbitrage/arbitrage-bg-1.webp'), url('../../images/arbitrage/arbitrage-bg-3.webp'), url('../../images/arbitrage/arbitrage-bg-2.webp');
+	background-position: bottom right;
+	background-blend-mode: multiply, normal, normal;
+	position: relative;
+	overflow: hidden;
+}
+
+.arbitrage__item--black {
+	background-color: #282828;
+	background-image: url('../../images/arbitrage/hours24.svg');
+}
+
+.arbitrage__item--black .arbitrage__text {
+	color: #fafbff;
+}
+.arbitrage__item--black .arbitrage__box {
+	background: #474848;
+}
+
+.arbitrage__box {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	width: 49px;
+	height: 49px;
+	margin-bottom: auto;
+	background-color: rgba(90, 115, 160, 0.15);
+}
+
+.arbitrage__text {
+	font-weight: 600;
+	font-size: 18px;
+	color: #282828;
+}
