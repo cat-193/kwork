@@ -42,6 +42,8 @@ ol {
 }
 
 button {
+	padding-right: 0;
+	padding-left: 0;
 	border: none;
 	cursor: pointer;
 	background-color: transparent;
@@ -110,4 +112,54 @@ button {
 	font-weight: 300;
 	font-size: 20px;
 	color: rgba(90, 115, 160, 0.35);
+}
+
+.earn-button {
+	display: flex;
+	justify-content: center;
+	gap: 2px;
+}
+
+.earn-button__text {
+	border-radius: 12px 0 0 12px;
+	background: #282828;
+	padding: 19px 42.5px 18px 41.5px;
+	font-weight: 500;
+	font-size: 15px;
+	color: #fff;
+	transition: var(--transition);
+}
+
+.earn-button__icon {
+	border-radius: 0 12px 12px 0;
+	background: #282828;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 24px 20px 22px 22px;
+	transition: var(--transition);
+}
+
+.earn-button:focus-visible {
+	outline: none;
+}
+
+.earn-button:focus-visible .earn-button__text,
+.earn-button:focus-visible .earn-button__icon {
+	outline: none;
+	background: #5a73a0;
+}
+
+@media (hover:hover) {
+
+	.earn-button:hover .earn-button__text,
+	.earn-button:hover .earn-button__icon {
+		background: #5a73a0;
+	}
+}
+
+
+.earn-button:active .earn-button__text,
+.earn-button:active .earn-button__icon {
+	background: #6f8fc8;
 }

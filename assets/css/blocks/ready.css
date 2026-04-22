@@ -1,0 +1,53 @@
+.ready {
+	position: relative;
+	background-image:
+		url('../../images/ready/ready-phone.webp'),
+		url('../../images/ready/ready-blur.webp');
+	background-repeat: no-repeat, no-repeat;
+	background-position: right 75px bottom, right center;
+}
+
+.ready::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 156px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #fff 100%);
+	backdrop-filter: blur(0.6px);
+	pointer-events: none;
+}
+
+
+.ready__wrapper {
+	padding-top: 89px;
+	padding-bottom: 116px;
+	max-width: 531px;
+	position: relative;
+	z-index: 10;
+}
+
+.ready__title {
+	margin-bottom: 30px;
+}
+
+.ready__title::before {
+	content: "05/";
+}
+
+
+.ready__text {
+	font-weight: 400;
+	font-size: 18px;
+	color: #282828;
+	margin-bottom: 43px;
+}
+
+.ready__button {}
+
+.earn-button {}
+
+.earn-button__text {}
+
+.earn-button__icon {}
